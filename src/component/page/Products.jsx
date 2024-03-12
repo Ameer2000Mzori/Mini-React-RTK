@@ -1,14 +1,17 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 const Products = () => {
-  const products = useSelector((state) => state.products)
+  const collectionOfProducts = useSelector((state) => state.counter.products)
+
+  console.log('this is products collection ', collectionOfProducts)
+  if (collectionOfProducts.length <= 0) return <div>no products to show</div>
 
   return (
     <>
       <h1>Products</h1>
       <ul>
-        {products.map((product) => (
-          <li key={product.id}>{product.name}</li>
+        {collectionOfProducts.map((product) => (
+          <li key={product}>{product.productName}</li>
         ))}
       </ul>
     </>
