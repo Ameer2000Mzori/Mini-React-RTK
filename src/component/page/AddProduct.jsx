@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useFormik } from 'formik'
 import { validationSchema } from './shared/validationSchema.js'
 import {
@@ -41,6 +42,9 @@ const AddProduct = () => {
             formik.handleSubmit()
           }}
         >
+          <Link className=" absolute top-[5px] right-[15px]" to="/products">
+            back
+          </Link>
           <StyledInputsWrap>
             <StyledLabel name="description" htmlFor="productName">
               name

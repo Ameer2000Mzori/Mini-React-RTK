@@ -19,6 +19,7 @@ export const StyledForm = styled.form`
   justify-content: center;
   gap: 5px;
   background-color: #67c6e3;
+  position: relative;
 `
 
 export const StyledInputsWrap = styled.div`

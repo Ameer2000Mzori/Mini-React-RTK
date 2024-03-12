@@ -13,7 +13,7 @@ const Products = () => {
           <div>there is no products here</div>
           <p>would you like to add new product ?</p>
           <Link
-            className="w-[150px] h-[40px] bg-zinc-500 rounded-sm hover:bg-zinc-400 active:bg-zinc-600"
+            className="text-white flex flex-col text-center items-center justify-center w-[150px] h-[40px] bg-zinc-500 rounded-sm hover:bg-zinc-400 active:bg-zinc-600"
             to="/addproduct"
           >
             Add Product
@@ -24,6 +24,12 @@ const Products = () => {
 
   return (
     <StyledProductsWrapper>
+      <Link
+        className=" text-white flex flex-col text-center items-center justify-center w-[150px] h-[40px] bg-zinc-500 rounded-sm hover:bg-zinc-400 active:bg-zinc-600"
+        to="/addproduct"
+      >
+        Add Product
+      </Link>
       <h1>Products</h1>
       <ul>
         {collectionOfProducts.map((product) => (
