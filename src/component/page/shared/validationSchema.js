@@ -1,7 +1,7 @@
 import * as Yup from 'yup'
 
 export const validationSchema = Yup.object().shape({
-  name: Yup.string().required('name us required'),
+  productName: Yup.string().required('name us required'),
   description: Yup.string()
     .min(10, 'too short')
     .max(100, 'too high')

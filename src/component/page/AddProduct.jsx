@@ -1,19 +1,25 @@
 import React from 'react'
-import { Formik } from 'formik'
+import { useFormik } from 'formik'
 import { validationSchema } from './shared/validationSchema.js'
-import { StyledPageWrapper } from './shared/StyledComponents.jsx'
+import {
+  StyledPageWrapper,
+  StyledForm,
+  StyledInputsWrap,
+  StyledLabel,
+  StyledInput,
+} from './shared/StyledComponents.jsx'
 
 const AddProduct = () => {
-  const formik = new Formik({
+  const formik = new useFormik({
     initialValues: {
-      name: '',
+      productName: '',
       description: '',
       price: '',
       stock: '',
       category: '',
     },
     onSubmit: (values) => {
-      console.log(values)
+      console.log('values you input', values)
     },
     validationSchema: validationSchema,
   })
@@ -21,7 +27,28 @@ const AddProduct = () => {
   return (
     <>
       <StyledPageWrapper>
-        <div>AddProduct</div>
+        <StyledForm
+          onSubmit={(e) => {
+            e.preventDefault()
+            formik.handleSubmit()
+          }}
+        >
+          <StyledInputsWrap>
+            <StyledLabel id="productName" htmlFor="productName">
+              name
+            </StyledLabel>
+            <StyledInput
+              type="text"
+              name="productName"
+              id="productName"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.productName}
+            />
+          </StyledInputsWrap>
+
+          <button type="onsubmit">submit</button>
+        </StyledForm>
       </StyledPageWrapper>
     </>
   )
