@@ -33,6 +33,20 @@ const counterSlice = createSlice({
       ]
       console.log('this is products after add: ', state.products)
     },
+
+    addUser: (state, action) => {
+      const { userName, userAge, userGender } = action.payload
+
+      state.users = [
+        ...state.products,
+        {
+          userName,
+          userAge,
+          userGender,
+        },
+      ]
+      console.log('this is products after add: ', state.products)
+    },
   },
 })
 
