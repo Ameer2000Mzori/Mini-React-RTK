@@ -13,7 +13,6 @@ import {
 import { addProduct } from '../../countSlice.js'
 import ErrorComponent from './shared/ErrorComponent.jsx'
 import { useDispatch } from 'react-redux'
-import { useFormik } from 'formik'
 
 const AddProduct = () => {
   const dispatch = useDispatch()
