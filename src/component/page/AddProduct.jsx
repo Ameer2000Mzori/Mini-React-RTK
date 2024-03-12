@@ -14,7 +14,7 @@ const AddProduct = () => {
     onSubmit: (values) => {
       console.log(values)
     },
-    validationSchema,
+    validationSchema: validationSchema,
   })
 
   return <div>AddProduct</div>
