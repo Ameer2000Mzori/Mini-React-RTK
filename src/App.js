@@ -6,10 +6,12 @@ import AddProduct from './component/page/AddProduct.jsx'
 import Products from './component/page/Products.jsx'
 import AddUser from './component/page/AddUser.jsx'
 import Users from './component/page/Users.jsx'
+import Navbar from './component/Navbar.jsx'
 function App() {
   return (
     <div>
       <Router>
+        <Navbar />
         <Routes>
           <Route path="*" element={<NotFoundPage />} />
           <Route path="/" element={<Home />} />
@@ -17,7 +19,7 @@ function App() {
           <Route path="/addproduct" element={<AddProduct />} />
           <Route path="/products" element={<Products />} />
           <Route path="/adduser" element={<AddUser />} />
-          <Route path="/usrs" element={<Users />} />
+          <Route path="/users" element={<Users />} />
         </Routes>
       </Router>
     </div>
