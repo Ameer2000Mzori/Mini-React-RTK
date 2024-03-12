@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useFormik } from 'formik'
+import { addUser } from '../../countSlice.js'
 import {
   StyledPageWrapper,
   StyledForm,
@@ -9,23 +10,22 @@ import {
   StyledInput,
   StyledButton,
 } from './shared/StyledComponents.jsx'
-const AddUser = () => {
+import { userValidation } from './shared/validationSchema.js'
+
+const AddUserComponent = () => {
   const dispatch = useDispatch()
 
   const formik = useFormik({
     initialValues: {
-      username: '',
+      name: '',
       password: '',
     },
     onSubmit: (values) => {
       console.log('values you input', values)
       dispatch(addUser(values))
     },
+    validationSchema: userValidation,
   })
-
-  const addUser = (value) => {
-    dispatch(addUser(value))
-  }
 
   return (
     <>
@@ -37,15 +37,15 @@ const AddUser = () => {
           }}
         >
           <StyledInputsWrap>
-            <StyledLabel name="username" htmlFor="username">
-              username
+            <StyledLabel name="name" htmlFor="name">
+              name
             </StyledLabel>
             <StyledInput
               type="text"
-              name="username"
+              name="name"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              value={formik.values.username}
+              value={formik.values.name}
             />
           </StyledInputsWrap>
           <StyledInputsWrap>
@@ -67,4 +67,4 @@ const AddUser = () => {
   )
 }
 
-export default AddUser
+export default AddUserComponent

@@ -35,21 +35,22 @@ const counterSlice = createSlice({
     },
 
     addUser: (state, action) => {
-      const { userName, userAge, userGender } = action.payload
+      const { name, password } = action.payload
+      console.log('user info before add : ', name, password)
 
       state.users = [
-        ...state.products,
+        ...state.users,
         {
-          userName,
-          userAge,
-          userGender,
+          name,
+          password,
         },
       ]
-      console.log('this is products after add: ', state.products)
+      console.log('this is users after add: ', state.users)
     },
   },
 })
 
-export const { increment, decrement, addProduct } = counterSlice.actions
+export const { increment, decrement, addProduct, addUser } =
+  counterSlice.actions
 
 export default counterSlice.reducer
