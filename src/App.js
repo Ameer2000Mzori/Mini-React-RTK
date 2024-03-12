@@ -1,24 +1,25 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { increment, decrement } from './countSlice.js' // Assuming counterSlice.js is in the same directory
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import NotFoundPage from './component/page/NotFoundPage.jsx'
+import Home from './component/page/Home.jsx'
+import AddProduct from './component/page/AddProduct.jsx'
+import Products from './component/page/Products.jsx'
+import AddUser from './component/page/AddUser.jsx'
+import Users from './component/page/Users.jsx'
 function App() {
-  const count = useSelector((state) => state.counter.count) // Corrected state access
-  const dispatch = useDispatch()
-
-  const handleIncrement = () => {
-    dispatch(increment())
-  }
-
-  const handleDecrement = () => {
-    dispatch(decrement())
-  }
-
   return (
     <div>
-      <h1>Count: {count}</h1>
-      <button onClick={handleIncrement}>Increment</button>
-      <button onClick={handleDecrement}>Decrement</button>
+      <Router>
+        <Routes>
+          <Route path="*" element={<NotFoundPage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/addproduct" element={<AddProduct />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/adduser" element={<AddUser />} />
+          <Route path="/usrs" element={<Users />} />
+        </Routes>
+      </Router>
     </div>
   )
 }
