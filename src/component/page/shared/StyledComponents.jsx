@@ -9,14 +9,15 @@ export const StyledPageWrapper = styled.div`
 `
 
 export const StyledForm = styled.form`
-  height: 340px;
-  width: 700px;
+  height: 640px;
+  width: 400px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 5px;
+  background-color: #67c6e3;
 `
 
 export const StyledInputsWrap = styled.div`

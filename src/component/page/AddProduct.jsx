@@ -47,6 +47,62 @@ const AddProduct = () => {
             />
           </StyledInputsWrap>
 
+          <StyledInputsWrap>
+            <StyledLabel id="description" htmlFor="description">
+              description
+            </StyledLabel>
+            <StyledInput
+              type="text"
+              name="description"
+              id="description"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.description}
+            />
+          </StyledInputsWrap>
+
+          <StyledInputsWrap>
+            <StyledLabel id="price" htmlFor="price">
+              price
+            </StyledLabel>
+            <StyledInput
+              type="number"
+              name="price"
+              id="price"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.price}
+            />
+          </StyledInputsWrap>
+
+          <StyledInputsWrap>
+            <StyledLabel id="stock" htmlFor="stock">
+              stock
+            </StyledLabel>
+            <StyledInput
+              type="number"
+              name="stock"
+              id="stock"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.stock}
+            />
+          </StyledInputsWrap>
+
+          <StyledInputsWrap>
+            <StyledLabel id="category" htmlFor="category">
+              category
+            </StyledLabel>
+            <StyledInput
+              type="text"
+              name="category"
+              id="category"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.category}
+            />
+          </StyledInputsWrap>
+
           <button type="onsubmit">submit</button>
         </StyledForm>
       </StyledPageWrapper>
