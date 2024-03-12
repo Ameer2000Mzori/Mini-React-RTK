@@ -51,3 +51,9 @@ export const StyledInput = styled.input`
   justify-content: center;
   text-align: start;
 `
+
+export const StyledButton = styled.button`
+  width: 150px;
+  height: 40px;
+  background-color: white;
+`

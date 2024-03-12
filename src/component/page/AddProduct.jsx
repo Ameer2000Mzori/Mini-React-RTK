@@ -7,6 +7,7 @@ import {
   StyledInputsWrap,
   StyledLabel,
   StyledInput,
+  StyledButton,
 } from './shared/StyledComponents.jsx'
 
 const AddProduct = () => {
@@ -34,7 +35,7 @@ const AddProduct = () => {
           }}
         >
           <StyledInputsWrap>
-            <StyledLabel id="productName" htmlFor="productName">
+            <StyledLabel name="description" htmlFor="productName">
               name
             </StyledLabel>
             <StyledInput
@@ -48,7 +49,7 @@ const AddProduct = () => {
           </StyledInputsWrap>
 
           <StyledInputsWrap>
-            <StyledLabel id="description" htmlFor="description">
+            <StyledLabel name="description" htmlFor="description">
               description
             </StyledLabel>
             <StyledInput
@@ -62,7 +63,7 @@ const AddProduct = () => {
           </StyledInputsWrap>
 
           <StyledInputsWrap>
-            <StyledLabel id="price" htmlFor="price">
+            <StyledLabel name="price" htmlFor="price">
               price
             </StyledLabel>
             <StyledInput
@@ -76,7 +77,7 @@ const AddProduct = () => {
           </StyledInputsWrap>
 
           <StyledInputsWrap>
-            <StyledLabel id="stock" htmlFor="stock">
+            <StyledLabel name="stock" htmlFor="stock">
               stock
             </StyledLabel>
             <StyledInput
@@ -90,7 +91,7 @@ const AddProduct = () => {
           </StyledInputsWrap>
 
           <StyledInputsWrap>
-            <StyledLabel id="category" htmlFor="category">
+            <StyledLabel name="category" htmlFor="category">
               category
             </StyledLabel>
             <StyledInput
@@ -103,7 +104,7 @@ const AddProduct = () => {
             />
           </StyledInputsWrap>
 
-          <button type="onsubmit">submit</button>
+          <StyledButton type="onsubmit">submit</StyledButton>
         </StyledForm>
       </StyledPageWrapper>
     </>
