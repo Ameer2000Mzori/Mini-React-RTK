@@ -16,8 +16,23 @@ const counterSlice = createSlice({
     decrement: (state) => {
       state.count--
     },
+
+    addProduct: (state, action) => {
+      const payload = action.payload // Extract payload from action
+      const newProduct = {
+        productName: payload.productName,
+        description: payload.description,
+        price: payload.price,
+        stock: payload.stock,
+        category: payload.category,
+      }
+
+      state.products.unshift(newProduct)
+      console.log('this is products after add: ', state.products)
+    },
   },
 })
 
-export const { increment, decrement } = counterSlice.actions
+export const { increment, decrement, addProduct } = counterSlice.actions
+
 export default counterSlice.reducer

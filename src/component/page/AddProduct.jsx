@@ -9,8 +9,13 @@ import {
   StyledInput,
   StyledButton,
 } from './shared/StyledComponents.jsx'
+import { addProduct } from '../../countSlice.js'
+
+import { useDispatch } from 'react-redux'
 
 const AddProduct = () => {
+  const dispatch = useDispatch()
+
   const formik = new useFormik({
     initialValues: {
       productName: '',
@@ -20,6 +25,7 @@ const AddProduct = () => {
       category: '',
     },
     onSubmit: (values) => {
+      dispatch(addProduct(values)) // Dispatching addProduct action with form values
       console.log('values you input', values)
     },
     validationSchema: validationSchema,
