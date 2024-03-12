@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ErrorComponent = (Children) => {
+const ErrorComponent = ({ children }) => {
   return (
     <>
-      <p>{Children}</p>
+      <p>{children}</p>
     </>
   )
 }

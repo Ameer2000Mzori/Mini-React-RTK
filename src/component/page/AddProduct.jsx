@@ -10,7 +10,7 @@ import {
   StyledButton,
 } from './shared/StyledComponents.jsx'
 import { addProduct } from '../../countSlice.js'
-
+import ErrorComponent from './shared/ErrorComponent.jsx'
 import { useDispatch } from 'react-redux'
 
 const AddProduct = () => {
@@ -54,7 +54,7 @@ const AddProduct = () => {
               value={formik.values.productName}
             />
             {formik.touched.productName && formik.errors.productName ? (
-              <p>{formik.errors.productName}</p>
+              <ErrorComponent>{formik.errors.productName}</ErrorComponent>
             ) : null}
           </StyledInputsWrap>
 
@@ -70,6 +70,9 @@ const AddProduct = () => {
               onBlur={formik.handleBlur}
               value={formik.values.description}
             />
+            {formik.touched.description && formik.errors.description ? (
+              <ErrorComponent>{formik.errors.description}</ErrorComponent>
+            ) : null}
           </StyledInputsWrap>
 
           <StyledInputsWrap>
@@ -84,6 +87,9 @@ const AddProduct = () => {
               onBlur={formik.handleBlur}
               value={formik.values.price}
             />
+            {formik.touched.price && formik.errors.price ? (
+              <ErrorComponent>{formik.errors.price}</ErrorComponent>
+            ) : null}
           </StyledInputsWrap>
 
           <StyledInputsWrap>
@@ -98,6 +104,9 @@ const AddProduct = () => {
               onBlur={formik.handleBlur}
               value={formik.values.stock}
             />
+            {formik.touched.stock && formik.errors.stock ? (
+              <ErrorComponent>{formik.errors.stock}</ErrorComponent>
+            ) : null}
           </StyledInputsWrap>
 
           <StyledInputsWrap>
@@ -112,6 +121,9 @@ const AddProduct = () => {
               onBlur={formik.handleBlur}
               value={formik.values.category}
             />
+            {formik.touched.category && formik.errors.category ? (
+              <ErrorComponent>{formik.errors.category}</ErrorComponent>
+            ) : null}
           </StyledInputsWrap>
 
           <StyledButton type="onsubmit">submit</StyledButton>
