@@ -27,6 +27,7 @@ export const StyledInputsWrap = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
   gap: 5px;
 `
 
@@ -56,4 +57,11 @@ export const StyledButton = styled.button`
   width: 150px;
   height: 40px;
   background-color: white;
+`
+
+export const StyledErrorMessage = styled.p`
+  color: red;
+  display: flex;
+  width: 90%;
+  text-align: start;
 `

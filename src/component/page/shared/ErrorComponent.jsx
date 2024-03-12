@@ -1,9 +1,10 @@
 import React from 'react'
+import { StyledErrorMessage } from './StyledComponents.jsx'
 
 const ErrorComponent = ({ children }) => {
   return (
     <>
-      <p>{children}</p>
+      <StyledErrorMessage>{children}</StyledErrorMessage>
     </>
   )
 }
