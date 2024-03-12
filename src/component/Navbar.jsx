@@ -1,26 +1,31 @@
 import { Link } from 'react-router-dom'
+import {
+  StyledNavbar,
+  StyledUl,
+  StyledLi,
+} from './page/shared/StyledComponents.jsx'
 const Navbar = () => {
   return (
     <>
-      <nav>
-        <ul>
-          <li>
+      <StyledNavbar>
+        <StyledUl>
+          <StyledLi>
             <Link to="/">Home</Link>
-          </li>
-          <li>
+          </StyledLi>
+          <StyledLi>
             <Link to="/addproduct">Add Product</Link>
-          </li>
-          <li>
+          </StyledLi>
+          <StyledLi>
             <Link to="/products">Products</Link>
-          </li>
-          <li>
+          </StyledLi>
+          <StyledLi>
             <Link to="/adduser">Add User</Link>
-          </li>
-          <li>
+          </StyledLi>
+          <StyledLi>
             <Link to="/users">Users</Link>
-          </li>
-        </ul>
-      </nav>
+          </StyledLi>
+        </StyledUl>
+      </StyledNavbar>
     </>
   )
 }

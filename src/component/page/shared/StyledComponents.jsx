@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+// styling for add product components
 export const StyledPageWrapper = styled.div`
   height: 100vh;
   display: flex;
@@ -64,4 +65,41 @@ export const StyledErrorMessage = styled.p`
   display: flex;
   width: 90%;
   text-align: start;
+`
+
+// navbar stylings
+
+export const StyledNavbar = styled.nav`
+  height: 100px;
+  width: 100%;
+  display: flex;
+  top: 0;
+  left: 0;
+  flex-direction: row;
+  justify-content: Center;
+  align-items: center;
+  position: fixed;
+  background-color: #67c6e3;
+`
+
+export const StyledUl = styled.ul`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  align-text: center;
+  padding: 0;
+  margin: 0;
+`
+
+export const StyledLi = styled.li`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  align-text: center;
+  padding: 1rem;
+  margin: 5px;
 `
