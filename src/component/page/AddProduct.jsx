@@ -53,6 +53,9 @@ const AddProduct = () => {
               onBlur={formik.handleBlur}
               value={formik.values.productName}
             />
+            {formik.touched.productName && formik.errors.productName ? (
+              <p>{formik.errors.productName}</p>
+            ) : null}
           </StyledInputsWrap>
 
           <StyledInputsWrap>
