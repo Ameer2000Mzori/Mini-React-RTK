@@ -25,9 +25,10 @@ const AddProduct = () => {
       category: '',
     },
     onSubmit: (values) => {
-      dispatch(addProduct(values)) // Dispatching addProduct action with form values
       console.log('values you input', values)
+      dispatch(addProduct(values)) // Dispatching addProduct action with form values
     },
+
     validationSchema: validationSchema,
   })
 

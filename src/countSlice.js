@@ -7,7 +7,7 @@ const initialState = {
 }
 
 const counterSlice = createSlice({
-  name: 'count',
+  name: 'counter',
   initialState,
   reducers: {
     increment: (state) => {
@@ -18,16 +18,19 @@ const counterSlice = createSlice({
     },
 
     addProduct: (state, action) => {
-      const payload = action.payload // Extract payload from action
-      const newProduct = {
-        productName: payload.productName,
-        description: payload.description,
-        price: payload.price,
-        stock: payload.stock,
-        category: payload.category,
-      }
+      const { productName, description, price, stock, category } =
+        action.payload
 
-      state.products.unshift(newProduct)
+      state.products = [
+        ...state.products,
+        {
+          productName,
+          description,
+          price,
+          stock,
+          category,
+        },
+      ]
       console.log('this is products after add: ', state.products)
     },
   },
