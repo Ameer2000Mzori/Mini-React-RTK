@@ -21,6 +21,9 @@ const Navbar = () => {
           <StyledLi>
             <Link to="/users">Users</Link>
           </StyledLi>
+          <StyledLi>
+            <Link to="/displaychart">DisplayChart</Link>
+          </StyledLi>
         </StyledUl>
       </StyledNavbar>
     </>

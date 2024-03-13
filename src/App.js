@@ -6,6 +6,7 @@ import AddProduct from './component/page/AddProduct.jsx'
 import Products from './component/page/Products.jsx'
 import AddUserComponent from './component/page/AddUser.jsx'
 import Users from './component/page/Users.jsx'
+import DisplayChart from './component/page/shared/ChartsPage.jsx'
 import Navbar from './component/Navbar.jsx'
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/adduser" element={<AddUserComponent />} />
           <Route path="/users" element={<Users />} />
+          <Route path="/displaychart" element={<DisplayChart />} />
         </Routes>
       </Router>
     </div>
